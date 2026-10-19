@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://shufen404.github.io/personal-homepage-templates/10-%E6%89%8B%E7%BB%98%E6%B6%82%E9%B8%A6.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主页10 · 手绘涂鸦</title>
+<style>
+:root{
+  --paper:#fdf8ef;--ink:#46392e;
+  --c1:#ffb3ba;--c2:#baffc9;--c3:#bae1ff;--c4:#ffffba;--c5:#e0bbff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;background:var(--paper);color:var(--ink);overflow-x:hidden;
+  font-family:"Kaiti SC","STKaiti","KaiTi","Comic Sans MS","Segoe Print",cursive}
+.noise{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.65;
+  background-image:
+    radial-gradient(1.6px 1.6px at 8% 18%,rgba(70,57,46,.22),transparent 55%),
+    radial-gradient(1.4px 1.4px at 22% 64%,rgba(70,57,46,.18),transparent 55%),
+    radial-gradient(1.8px 1.8px at 35% 32%,rgba(70,57,46,.15),transparent 55%),
+    radial-gradient(1.3px 1.3px at 48% 82%,rgba(70,57,46,.2),transparent 55%),
+    radial-gradient(1.7px 1.7px at 62% 12%,rgba(70,57,46,.17),transparent 55%),
+    radial-gradient(1.4px 1.4px at 76% 55%,rgba(70,57,46,.19),transparent 55%),
+    radial-gradient(1.8px 1.8px at 88% 28%,rgba(70,57,46,.16),transparent 55%),
+    radial-gradient(1.5px 1.5px at 94% 72%,rgba(70,57,46,.2),transparent 55%),
+    radial-gradient(1.6px 1.6px at 15% 88%,rgba(70,57,46,.16),transparent 55%),
+    radial-gradient(1.4px 1.4px at 58% 45%,rgba(70,57,46,.15),transparent 55%),
+    radial-gradient(1.7px 1.7px at 71% 88%,rgba(70,57,46,.17),transparent 55%),
+    radial-gradient(1.5px 1.5px at 4% 46%,rgba(70,57,46,.15),transparent 55%)}
+.wrap{position:relative;z-index:1;width:min(720px,94vw);margin:0 auto;padding:54px 0 64px}
+.doodle{position:relative;border:3px solid var(--ink);background:#fffdf7;
+  border-radius:255px 18px 225px 18px/18px 225px 18px 255px;
+  box-shadow:4px 4px 0 rgba(70,57,46,.16);padding:26px}
+.doodle:hover{animation:shake .5s ease}
+@keyframes shake{
+  0%,100%{transform:rotate(0)}
+  20%{transform:rotate(-1.4deg) translateX(-3px)}
+  40%{transform:rotate(1.4deg) translateX(3px)}
+  60%{transform:rotate(-1deg) translateX(-2px)}
+  80%{transform:rotate(1deg) translateX(2px)}
+}
+.title{position:relative;display:inline-block;font-size:clamp(34px,8vw,52px);font-weight:700;letter-spacing:3px;
+  transform:rotate(-1.2deg);margin-bottom:26px}
+.title .underline{position:absolute;left:-6px;right:-6px;bottom:-10px}
+.title .underline svg{width:100%;height:18px;display:block;overflow:visible}
+.title .underline path{stroke:#ff8fa3;stroke-width:6;stroke-linecap:round;fill:none;
+  stroke-dasharray:100;stroke-dashoffset:100;animation:draw 1.1s .5s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.role{font-size:clamp(15px,3vw,18px);margin:20px 0 6px;transform:rotate(.6deg);display:inline-block}
+.role em{font-style:normal;color:#e07a5f;font-weight:700}
+.bio{font-size:15px;line-height:2;margin-top:14px}
+.bio b{background:linear-gradient(transparent 62%,rgba(255,179,186,.65) 62%);padding:0 2px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.chip{border:2.5px solid var(--ink);border-radius:255px 18px 225px 18px/18px 225px 18px 255px;
+  padding:8px 17px;font-size:14.5px;font-weight:700;transition:transform .18s}
+.chip:hover{animation:shake .45s ease}
+.c-c1{background:var(--c1)}.c-c2{background:var(--c2)}.c-c3{background:var(--c3)}
+.c-c4{background:var(--c4)}.c-c5{background:var(--c5)}.c-c6{background:var(--c1)}
+.notes-title{margin:44px 0 26px;font-size:clamp(20px,4vw,26px);transform:rotate(-.8deg);display:inline-block}
+.notes-title em{font-style:normal;color:#e07a5f}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:10px}
+.note{position:relative;background:var(--c3);border:2.5px solid var(--ink);padding:34px 20px 22px;
+  font-size:14.5px;line-height:1.85;cursor:pointer;
+  border-radius:4px 12px 8px 14px;box-shadow:6px 8px 0 rgba(70,57,46,.18);
+  --r:-1.6deg;transform:rotate(var(--r));transition:box-shadow .25s}
+.note::before{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-2deg);
+  width:96px;height:26px;background:rgba(255,255,255,.55);border:2px solid rgba(70,57,46,.35);
+  border-radius:3px;box-shadow:0 2px 4px rgba(70,57,46,.12)}
+.note:hover{animation:nlift .5s ease forwards;box-shadow:12px 18px 0 rgba(70,57,46,.22)}
+@keyframes nlift{
+  0%{transform:rotate(var(--r)) translateY(0)}
+  30%{transform:rotate(calc(var(--r) + 1.6deg)) translateY(-14px)}
+  60%{transform:rotate(calc(var(--r) - 1.1deg)) translateY(-12px)}
+  100%{transform:rotate(var(--r)) translateY(-10px) scale(1.03)}
+}
+.note h3{font-size:18px;margin-bottom:7px}
+.note .tags{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.note .tag{font-size:12px;padding:2px 10px;border:1.5px solid var(--ink);border-radius:20px;background:rgba(255,255,255,.5)}
+.n1{background:var(--c1)}.n2{background:var(--c4)}.n3{background:var(--c5)}
+.sig{text-align:right;margin-top:50px;font-size:17px;transform:rotate(-1deg)}
+.sig em{font-style:normal;color:#e07a5f;font-weight:700}
+.squiggle{display:block;width:130px;height:22px;margin:34px auto 0}
+.squiggle path{stroke:var(--ink);stroke-width:2.5;fill:none;stroke-linecap:round;opacity:.5}
+.side-doodle{position:fixed;z-index:0;font-size:30px;opacity:.4;pointer-events:none;animation:sway 5s ease-in-out infinite alternate}
+.d1{top:26px;right:34px;transform:rotate(12deg)}
+.d2{bottom:26px;left:30px;font-size:24px;animation-delay:1.4s;transform:rotate(-10deg)}
+@keyframes sway{from{transform:translateY(0) rotate(8deg)}to{transform:translateY(-14px) rotate(-8deg)}}
+.stamp{position:fixed;z-index:50;pointer-events:none;font-weight:700;line-height:1;
+  animation:stamp .95s ease-out forwards}
+@keyframes stamp{
+  0%{transform:translate(-50%,-50%) scale(.15) rotate(-14deg);opacity:0}
+  28%{opacity:1}
+  62%{transform:translate(-50%,-50%) scale(1.4) rotate(calc(var(--sr,0deg)));opacity:.95}
+  100%{transform:translate(-50%,-50%) scale(.92) rotate(calc(var(--sr,0deg)));opacity:0}
+}
+.note-toast{position:fixed;left:50%;bottom:34px;z-index:60;transform:translate(-50%,24px) rotate(-1deg);max-width:86vw;
+  padding:13px 22px;font-size:15px;text-align:center;background:#ffffba;border:2.5px solid var(--ink);
+  border-radius:255px 18px 225px 18px/18px 225px 18px 255px;
+  box-shadow:4px 5px 0 rgba(70,57,46,.3);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+.note-toast.show{opacity:1;transform:translate(-50%,0) rotate(-1deg)}
+@media (max-width:680px){
+  .notes{grid-template-columns:1fr;gap:30px}
+  .wrap{padding-top:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  .title .underline path,.side-doodle{animation:none}
+  .note:hover{animation:none;transform:translateY(-8px) rotate(var(--r))}
+}
+</style>
+</head>
+<body>
+<span class="side-doodle d1">☀</span>
+<span class="side-doodle d2">✿</span>
+<div class="noise"></div>
+<div class="wrap">
+
+  <h1 class="title">嗨，我是林默
+    <span class="underline"><svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M4 12 Q 60 2 120 10 T 296 9"></path>
+    </svg></span>
+  </h1>
+
+  <p class="role">独立开发者 <em>·</em> 创意工程师 <em>·</em> 6 年全栈经验</p>
+
+  <section class="doodle" data-tilt="1" style="--r: -1.2deg; transform: rotate(-1.2deg);">
+    <h2 style="font-size:19px;transform:rotate(.4deg)">关于我</h2>
+    <p class="bio">专注 <b>前端交互</b>、<b>数据可视化</b> 与 <b>创意编程</b>。相信一句话：<b>把复杂留给代码，把简单留给用户。</b></p>
+    <div class="chips">
+      <span class="chip c-c1" data-tilt="1" style="--r: -1.7deg; transform: rotate(-1.7deg);">HTML/CSS 92</span>
+      <span class="chip c-c2" data-tilt="1" style="--r: 0.7deg; transform: rotate(0.7deg);">JavaScript 88</span>
+      <span class="chip c-c3" data-tilt="1" style="--r: -2.1deg; transform: rotate(-2.1deg);">Vue·React 85</span>
+      <span class="chip c-c4" data-tilt="1" style="--r: -0.3deg; transform: rotate(-0.3deg);">Node.js 78</span>
+      <span class="chip c-c5" data-tilt="1" style="--r: 1.8deg; transform: rotate(1.8deg);">Canvas·SVG 90</span>
+      <span class="chip c-c6" data-tilt="1" style="--r: 2.7deg; transform: rotate(2.7deg);">UI 设计 80</span>
+    </div>
+  </section>
+
+  <h2 class="notes-title">一些 <em>小作品</em> 便利贴</h2>
+  <section class="notes">
+    <div class="note n1" data-tilt="1" data-detail="星图笔记 🌌 · 可视化笔记工具，开源，把想法连成星座。" style="--r: -1.9deg; transform: rotate(-1.9deg);">
+      <h3>星图笔记</h3>
+      <p>可视化笔记工具，把想法连成星座。</p>
+      <div class="tags"><span class="tag">Vue</span><span class="tag">开源</span></div>
+    </div>
+    <div class="note n2" data-tilt="1" data-detail="像素小镇 🏘️ · 像素风沙盒小游戏，一砖一瓦盖出小镇。" style="--r: -0.1deg; transform: rotate(-0.1deg);">
+      <h3>像素小镇</h3>
+      <p>像素风沙盒小游戏，自由建造。</p>
+      <div class="tags"><span class="tag">Canvas</span><span class="tag">游戏</span></div>
+    </div>
+    <div class="note n3" data-tilt="1" data-detail="声音花园 🎛️ · WebAudio 交互实验，让声音在花园里生长。" style="--r: 1.3deg; transform: rotate(1.3deg);">
+      <h3>声音花园</h3>
+      <p>WebAudio 交互实验，会唱歌。</p>
+      <div class="tags"><span class="tag">WebAudio</span><span class="tag">创意</span></div>
+    </div>
+  </section>
+
+  <svg class="squiggle" viewBox="0 0 130 22" aria-hidden="true">
+    <path d="M3 11 Q 18 2 33 11 T 63 11 T 93 11 T 127 10"></path>
+  </svg>
+
+  <p class="sig">—— <em>林默手绘</em> ✎</p>
+
+</div>
+<div class="note-toast" id="noteToast" role="status">像素小镇 🏘️ · 像素风沙盒小游戏，一砖一瓦盖出小镇。</div>
+<script>
+(function(){
+  var toast=document.getElementById('noteToast');
+  var toastTimer=null;
+
+  /* 加载时给每个元素一个随机小倾角，增加手绘感 */
+  document.querySelectorAll('[data-tilt]').forEach(function(el){
+    var r=(Math.random()*6-3).toFixed(1);
+    el.style.setProperty('--r',r+'deg');
+    el.style.transform='rotate('+r+'deg)';
+  });
+
+  /* ① 点击页面任意处盖一枚随机涂鸦章 */
+  var MARKS=['✿','☀','★','♥','❀','☂','✎','⚘','✧','❁'];
+  var COLORS=['#e07a5f','#6d8f4f','#5b8fc7','#c2577b','#8f6bb5','#b58a3c'];
+  function stamp(x,y){
+    var s=document.createElement('span');
+    s.className='stamp';
+    s.textContent=MARKS[Math.floor(Math.random()*MARKS.length)];
+    s.style.left=x+'px';
+    s.style.top=y+'px';
+    s.style.fontSize=(22+Math.random()*18)+'px';
+    s.style.color=COLORS[Math.floor(Math.random()*COLORS.length)];
+    s.style.setProperty('--sr',((Math.random()*50-25)|0)+'deg');
+    document.body.appendChild(s);
+    setTimeout(function(){s.remove()},1000);
+  }
+  document.addEventListener('pointerdown',function(e){
+    if(e.target.closest('.note'))return; /* 便利贴有独立交互 */
+    stamp(e.clientX,e.clientY);
+  });
+
+  /* ③ 便利贴点击：弹出手写风小纸条 */
+  document.querySelectorAll('.note').forEach(function(note){
+    note.addEventListener('click',function(){
+      toast.textContent=note.dataset.detail||note.textContent;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer=setTimeout(function(){toast.classList.remove('show')},2400);
+    });
+  });
+})();
+</script>
+
+
+</body><div class="xl-chrome-ext-bar_4DB361DE-01F7-4376-B494-639E489D19ED" id="xl_chrome_ext_4DB361DE-01F7-4376-B494-639E489D19ED" data-v-app="" style="display: block;"><div class=""><div id="xl_chrome_ext_video_tag_wrapper_4DB361DE-01F7-4376-B494-639E489D19ED" config="[object Object]" uiversion="v2" exception="true" latestvideosrc="" isshowvideotag="false" isshowdownloadbar="true" isshowcloudaddbar="false"><div class="_video_op_wrapper_96mx8_1" config="[object Object]" uiversion="v2" style="display: none;"><ul class="_video_op_list_96mx8_17"><li class="_op_item_96mx8_39 _download_96mx8_45"><span class="_op_icon_96mx8_25"></span><span class="_op_text_96mx8_31">下载</span></li><li class="_op_item_96mx8_39 _screen_96mx8_51"><span class="_op_icon_96mx8_25"></span><span class="_op_text_96mx8_31">投屏</span></li></ul></div></div><div class="badge_wrapper_4DB361DE-01F7-4376-B494-639E489D19ED _badge_wrapper_wnbzb_1" id="badge_wrapper_4DB361DE-01F7-4376-B494-639E489D19ED"><div class="_logo_wnbzb_24"></div><span class="_line_wnbzb_32"></span><div class="_text_wrapper_wnbzb_39"><span class="_download_icon_wnbzb_51"></span><span class="_text_wnbzb_39">高速下载</span></div></div><!----><!----><!----><!----><div class="_container_wq4mj_4"><!----></div></div></div></html>
